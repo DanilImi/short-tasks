@@ -21,6 +21,7 @@ function findMissingNumber(arr) {
   return -1;
 }
 
+//Тесты: файл find-missing-number.test.js
 //сложность: O(n log n) из-за sort. Остальное имеет сложность O(n)
 /*алгоритм:
     1) сортируем массив, чтобы получить макс и мин значение(возможно можно было сделать это через Math.max и Math.min)
