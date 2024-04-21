@@ -23,3 +23,19 @@ const selectionSearch = (array) => {
 console.log(selectionSearch(arr));
 console.log(arr.length); // O(n*n)
 console.log("count = ", count);
+
+const selectionSearch2 = (array) => {
+  for (let i = 0; i < array.length - 1; i++) {
+    let minIndex = i;
+
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[j] < array[minIndex]) {
+        minIndex = j;
+      }
+    }
+    [array[i], array[minIndex]] = [array[minIndex], array[i]];
+  }
+  return array;
+};
+
+console.log(selectionSearch2([2, 4, 3, 6, 5, 1]));
